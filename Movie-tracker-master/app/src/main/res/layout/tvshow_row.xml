@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/imageViewTvShow"
+                    android:layout_width="100dp"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                    android:id="@+id/labelTvShowName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Tv show name: "
+                    card_view:layout_constraintBottom_toTopOf="@+id/labelTvShowNumberOfSeassons"
+                    card_view:layout_constraintStart_toEndOf="@+id/imageViewTvShow"
+                    card_view:layout_constraintTop_toTopOf="@+id/imageViewTvShow" />
+
+            <TextView
+                    android:id="@+id/textViewTvShowName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/labelTvShowName"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/labelTvShowName"
+                    card_view:layout_constraintTop_toTopOf="@+id/labelTvShowName" />
+
+
+            <TextView
+                    android:id="@+id/labelTvShowNumberOfSeassons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Number of seassons: "
+                    card_view:layout_constraintBottom_toTopOf="@+id/labelTvShowYear"
+                    card_view:layout_constraintStart_toStartOf="@+id/labelTvShowName"
+                    card_view:layout_constraintTop_toBottomOf="@+id/labelTvShowName" />
+
+            <TextView
+                    android:id="@+id/textViewNumberOfSeassons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@id/labelTvShowNumberOfSeassons"
+                    card_view:layout_constraintTop_toBottomOf="@+id/textViewTvShowName" />
+
+            <TextView
+                    android:id="@+id/labelTvShowYear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Release year: "
+                    card_view:layout_constraintBottom_toTopOf="@+id/labelDescription"
+                    card_view:layout_constraintStart_toStartOf="@+id/labelTvShowNumberOfSeassons"
+                    card_view:layout_constraintTop_toBottomOf="@+id/labelTvShowNumberOfSeassons" />
+
+            <TextView
+                    android:id="@+id/textViewTvShowYear"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_height="wrap_content"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="@+id/textViewTvShowName"
+                    card_view:layout_constraintTop_toBottomOf="@+id/textViewNumberOfSeassons"/>
+
+
+            <TextView
+                    android:id="@+id/labelDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Description: "
+                    card_view:layout_constraintBottom_toBottomOf="@+id/imageViewTvShow"
+                    card_view:layout_constraintStart_toStartOf="@+id/labelTvShowYear"
+                    card_view:layout_constraintTop_toBottomOf="@+id/labelTvShowYear" />
+
+            <TextView
+                    android:id="@+id/textViewTvShowDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:singleLine="true"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="@+id/textViewTvShowName"
+                    card_view:layout_constraintTop_toBottomOf="@+id/textViewTvShowYear" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
